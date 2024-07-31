@@ -12,6 +12,8 @@ class CustomTextFormField extends StatelessWidget {
   final bool? readOnlyy;
   final String? Function(String?)? validatorrr;
 
+  final void Function()? onTap;
+
   const CustomTextFormField({
     super.key,
     this.hintTextt,
@@ -24,6 +26,7 @@ class CustomTextFormField extends StatelessWidget {
     this.obscurityy = false,
     this.readOnlyy = false,
     this.validatorrr,
+    this.onTap,
   });
 
   @override
@@ -57,13 +60,15 @@ class CustomTextFormFieldRectangular extends StatelessWidget {
   final String? hintTextt;
   final String? labelTextt;
   final Icon? prefixIconn;
-  final Icon? suffixIconn;
+  final IconButton? suffixIconn;
   // final Color? iconColors;
   final TextEditingController? controllerr;
   final TextInputType? keyboardType;
   final bool? obscurityy;
   final bool? readOnlyy;
   final String? Function(String?)? validatorrr;
+
+  final void Function()? onTapp;
 
   const CustomTextFormFieldRectangular({
     super.key,
@@ -77,30 +82,29 @@ class CustomTextFormFieldRectangular extends StatelessWidget {
     this.obscurityy = false,
     this.readOnlyy = false,
     this.validatorrr,
+    this.onTapp,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
-      child: SizedBox(
-        height: MediaQuery.sizeOf(context).height * .07,
-        child: TextFormField(
-          controller: controllerr,
-          obscureText: obscurityy!,
-          validator: validatorrr,
-          readOnly: readOnlyy!,
-          decoration: InputDecoration(
-            prefixIcon: prefixIconn,
-            // prefixIconColor: iconColors,
-            suffixIcon: suffixIconn,
-            // suffixIconColor: iconColors,
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-            hintText: hintTextt,
-            labelText: labelTextt,
-          ),
-          keyboardType: keyboardType,
+      child: TextFormField(
+        onTap: onTapp,
+        controller: controllerr,
+        obscureText: obscurityy!,
+        validator: validatorrr,
+        readOnly: readOnlyy!,
+        decoration: InputDecoration(
+          prefixIcon: prefixIconn,
+          // prefixIconColor: iconColors,
+          suffixIcon: suffixIconn,
+          // suffixIconColor: iconColors,
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          hintText: hintTextt,
+          labelText: labelTextt,
         ),
+        keyboardType: keyboardType,
       ),
     );
   }

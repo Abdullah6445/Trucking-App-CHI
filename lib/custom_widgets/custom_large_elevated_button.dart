@@ -18,6 +18,6 @@ class CustomLargeElevatedButton extends StatelessWidget {
               Size(double.infinity, MediaQuery.sizeOf(context).height * .06),
         ),
         onPressed: onTap,
-        child: Text("Login"));
+        child: Text(buttonText));
   }
 }
