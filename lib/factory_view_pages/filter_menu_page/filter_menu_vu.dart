@@ -2,6 +2,7 @@ import 'package:chi_trucking_app_factory/custom_widgets/custom_large_elevated_bu
 import 'package:chi_trucking_app_factory/custom_widgets/custom_text_field.dart';
 import 'package:chi_trucking_app_factory/factory_view_pages/filter_menu_page/filter_menu_vm.dart';
 import 'package:chi_trucking_app_factory/factory_view_pages/filter_menu_page/filter_more_menu/origin_pages/origin_page_vu.dart';
+import 'package:chi_trucking_app_factory/factory_view_pages/submit_page/submit_page_vu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stacked/stacked.dart';
@@ -70,7 +71,11 @@ class FilterPageVU extends StackedView<FilterPageVM> {
                     },
                     icon: Icon(Icons.keyboard_arrow_right))),
             Spacer(),
-            CustomLargeElevatedButton(buttonText: "Confirm", onTap: () {})
+            CustomLargeElevatedButton(
+                buttonText: "Confirm",
+                onTap: () {
+                  CustomDialog().customDialogBox(context);
+                })
           ]),
         ),
       ),
