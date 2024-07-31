@@ -12,13 +12,19 @@ class SettingPageVU extends StackedView<SettingPageVM> {
       // backgroundColor: Colors.amber,
       appBar: AppBar(
         forceMaterialTransparency: true,
-        leading: GestureDetector(
-          onTap: () {},
-          child: Icon(
-            Icons.arrow_back_ios_new_rounded,
-            color: Colors.black,
-          ),
-        ),
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.keyboard_arrow_left_sharp,
+              color: Colors.black,
+            )),
+        // leading: GestureDetector(
+        //   onTap: () {},
+        //   child: Icon(
+        //     Icons.arrow_back_ios_new_rounded,
+        //     color: Colors.black,
+        //   ),
+        // ),
         centerTitle: true,
         title: Text(
           "Settings",
@@ -38,6 +44,7 @@ class SettingPageVU extends StackedView<SettingPageVM> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
               ),
               ListTile(
+                onTap: () {},
                 minLeadingWidth: 20,
                 leading: Icon(Icons.person_2_outlined),
                 title: Text("Profile"),
@@ -48,6 +55,7 @@ class SettingPageVU extends StackedView<SettingPageVM> {
                 ),
               ),
               ListTile(
+                onTap: () {},
                 // minLeadingWidth: ,
                 minLeadingWidth: 20,
                 leading: Icon(Icons.lock),
