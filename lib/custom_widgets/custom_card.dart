@@ -7,20 +7,21 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        forceMaterialTransparency: true,
-        title: const Text(
-          "appbar",
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
-        BottomNavigationBarItem(label: "Setting", icon: Icon(Icons.settings)),
-      ]),
+      // appBar: AppBar(
+      //   forceMaterialTransparency: true,
+      //   title: const Text(
+      //     "appbar",
+      //     style: TextStyle(color: Colors.black),
+      //   ),
+      // ),
+      // bottomNavigationBar: BottomNavigationBar(items: const [
+      //   BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
+      //   BottomNavigationBarItem(label: "Setting", icon: Icon(Icons.settings)),
+      // ]),
       body: ListView.builder(
         itemBuilder: (context, index) {
           return Container(
+            color: Colors.amber,
             height: MediaQuery.sizeOf(context).height * .25,
             child: Padding(
               padding: const EdgeInsets.all(12.0),

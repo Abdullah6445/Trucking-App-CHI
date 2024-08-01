@@ -1,7 +1,10 @@
 import 'package:chi_trucking_app_factory/custom_widgets/custom_text_field.dart';
+import 'package:chi_trucking_app_factory/factory_view_pages/dashboard_page/dashboard_pages_vu.dart';
 
 import 'package:chi_trucking_app_factory/factory_view_pages/login_page/login_page_vm.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import 'package:stacked/stacked.dart';
 
@@ -48,7 +51,7 @@ class LoginPageVU extends StackedView<LoginPageVM> {
                         MediaQuery.sizeOf(context).height * .06),
                   ),
                   onPressed: () {
-                    // Get.to(DashboardPageVU());
+                    Get.to(DashboardPageVU());
                   },
                   child: Text("Login")),
             ],
